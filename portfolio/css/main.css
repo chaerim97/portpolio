@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/*----- HEADER -----*/
+header{display:flex; justify-content:space-between; align-items:center; position:relative; padding:0 3rem; width:100%; height:5rem; background:#fff; border-bottom:1px solid #ddd; font-size:1.25rem;}
+header div.h-logo{color:var(--color-gray); font-weight:700;}
+header div.h-nav{}
+header div.h-nav ul.nav-list{display:flex; align-items:center; gap:5rem;}
+header div.h-nav ul.nav-list li{}
+header div.h-nav ul.nav-list li a{width:100%; height:100%;}
+
+
+
+/*----- SECTION -----*/
+#wrap section[class^="sect"] div.sect-inner{width:100%; padding:5vw 8vw;}
+#wrap section[class^="sect"] div.sect-tit{margin-bottom:3rem;}
+#wrap section[class^="sect"] div.sect-tit p.eng{font-weight:800; font-size:4rem; margin-bottom:1rem;}
+#wrap section[class^="sect"] div.sect-tit p.kor{font-size:1.5rem; opacity:.6;}
+
+
+
+/*----- INTRO -----*/
+section.sect-intro{}
+section.sect-intro div.intro{display:flex; justify-content:space-between; align-items:center;} 
+section.sect-intro div.intro div.main-txt{} 
+section.sect-intro div.intro div.main-txt p.eng-txt{font-size:clamp(3.2rem, 3.2rem + 4vw, 6rem); font-weight:800;} 
+section.sect-intro div.intro div.main-txt p.kor-txt{font-size:1.5rem; margin-top:2rem;} 
+section.sect-intro div.intro div.main-ico{width:15rem;}  
+section.sect-intro div.intro div.main-ico div.ico{width:100%; height:auto; animation:move_real_img 2s infinite; animation-timing-function:ease-in-out;} 
+section.sect-intro div.intro div.main-ico div.shadow{width:100%; animation:move_shadow_img 2s infinite; animation-timing-function:ease-in-out;} 
+@keyframes move_real_img{
+    0%{transform:translateY(-3%);}
+    50%{transform:translateY(3%);}
+    100%{transform:translateY(-3%);}
+}
+@keyframes move_shadow_img{
+    0%{transform:translateY(3%) scale(1.0);}
+    50%{transform:translateY(-3%) scale(1.2);}
+    100%{transform:translateY(3%) scale(1.0);}
+}
+
+
+
+/*----- HOME/WORK -----*/
+section.sect-work{}
+section.sect-work ul.work-list{display:flex; flex-wrap:wrap; gap:3rem; justify-content:space-between;}
+section.sect-work ul.work-list li{width:calc((100% - 6rem) / 3); height:21rem; position:relative; border-radius:5px; overflow:hidden;}
+section.sect-work ul.work-list li a{display:block; width:100%; height:100%;}
+section.sect-work ul.work-list li div.thumb{width:100%; height:100%;}
+section.sect-work ul.work-list li div.thumb:after{content:''; display:block; width:100%; height:100%; z-index:1; background:rgba(0,0,0,0.05); position:absolute; top:0; left:0;}
+section.sect-work ul.work-list li div.thumb img{width:100%; height:100%; object-fit:cover;}
+section.sect-work ul.work-list li div.thumb div.tag{position:absolute; bottom:0.8rem; left:0.8rem; display:flex; gap:5px; align-items:center; z-index:2;}
+section.sect-work ul.work-list li div.thumb div.tag span{font-size:14px; padding:2px 10px; border-radius:3px; background:var(--color-black); color:#fff;}
+section.sect-work ul.work-list li div.hover{}
+/* button-moreview */
+section.sect-work div.move-moreview{margin-top:5rem; text-align:center;}
+section.sect-work div.move-moreview a{position:relative; margin:0 auto; width:fit-content;}
+section.sect-work div.move-moreview a:before{content:''; display:block; width:100px; height:100px; background:linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgb(255 255 255 / 0%) 100%); z-index:1; position:absolute; top:0; left:0;}
+section.sect-work div.move-moreview a:after{content:''; display:block; width:100px; height:100px; background:linear-gradient(90deg, rgb(255 255 255 / 0%) 0%, rgba(255, 255, 255, 1) 100%); z-index:1; position:absolute; top:0; right:0;}
+section.sect-work div.move-moreview a ul.moreview{display:flex; align-items:center; gap:3rem; flex-wrap:nowrap; white-space:nowrap; overflow:hidden;}
+section.sect-work div.move-moreview a ul.moreview li{display:flex; align-items:center; gap:0.5rem; animation:move_text 10s linear infinite; position:relative;}
+section.sect-work div.move-moreview a ul.moreview li p{font-size:1.5rem;}
+section.sect-work div.move-moreview a ul.moreview li div.arrow{display:inline-block; width:1.5rem; height:1.5rem; position:relative;}
+section.sect-work div.move-moreview a ul.moreview li div.arrow i{transition:0.3s; display:block; background:var(--color-black); position:absolute;}
+section.sect-work div.move-moreview a ul.moreview li div.arrow i:not(.a02){width:1px; height:50%; top:0; left:50%; transform:translateX(-50%);}
+section.sect-work div.move-moreview a ul.moreview li div.arrow i.a02{width:100%; height:1px; top:50%; left:0; transform:translateY(-50%);}
+section.sect-work div.move-moreview a ul.moreview li div.arrow i.a03{top:unset; bottom:0;}
+@media(hover:hover){
+    section.sect-work div.move-moreview a:hover ul.moreview li{animation-play-state: paused;}
+    section.sect-work div.move-moreview a:hover ul.moreview li div.arrow i.a01{left:calc(100% - 4px); top:2px; transform:translateX(-50%) rotate(-45deg);}
+    section.sect-work div.move-moreview a:hover ul.moreview li div.arrow i.a03{left:calc(100% - 4px); top:unset; bottom:2px; transform:translateX(-50%) rotate(45deg);}
+}
+@keyframes move_text{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-100%);}
+}
+
+
+
+/*----- PROJECT -----*/
+section.sect-project div.project{}
+section.sect-project div.project ul.p-list{border-top:1px solid #ccc;}
+section.sect-project div.project ul.p-list li{border-bottom:1px solid #ccc;}
+section.sect-project div.project ul.p-list li a{padding:3rem 1rem; display:flex; justify-content:space-between; align-items:center;}
+section.sect-project div.project ul.p-list li a p.tit{width:60%; font-weight:600; font-size:1.5rem;}
+section.sect-project div.project ul.p-list li a p.edu{width:40%; word-break:keep-all; color:var(--color-gray); font-size:1.125rem; word-spacing:4px;}
+
+
+
+/*----- SKILLS -----*/
+section.sect-skills{width:100% !important; height:100vh; background:#000; display:flex; align-items:Center; justify-content:center; position:relative;} 
+section.sect-skills:before{content:''; display:block; width:100%; height:100%; position:absolute; top:0; left:0;}
+section.sect-skills div.sect-bg{position:absolute; top:0; left:0; width:100%; height:100%;}
+section.sect-skills div.sect-bg div.bg{position:absolute; top:0; left:0; width:100%; height:100%; transition: 0.5s;  opacity:0;}
+section.sect-skills div.sect-bg div.bg.design{background:url("../img/skills_bg_design.png")center/cover no-repeat;}
+section.sect-skills div.sect-bg div.bg.publishing{background:url("../img/skills_bg_publlishing.png")center/cover no-repeat;}
+section.sect-skills div.sect-inner{position:relative; z-index:10;}
+section.sect-skills div.sect-tit{color:#fff;}
+section.sect-skills div.skill-box{display:flex; align-items:center; justify-content:space-between;}
+section.sect-skills div.skill-box div.skill{width:48%; min-height:50vh;padding:4rem; overflow: hidden; border-radius:5px; transition:transform 0.5s; backdrop-filter:blur(5px); display:flex; flex-direction:column; justify-content:flex-end; position:relative;}
+section.sect-skills div.skill-box div.skill div.s-bg{position:absolute; top:0; left:0; width:100%; height:100%; opacity:.9; z-index:0; transition:0.5s;}
+section.sect-skills div.skill-box div.skill div.s-txt{position:relative; z-index:1;}
+section.sect-skills div.skill-box div.skill div.s-txt p.tit{color:#fff; font-size:2.5rem; font-weight:700; text-shadow:1px 1px 3px rgba(0,0,0,0.1);}
+section.sect-skills div.skill-box div.skill div.s-txt ul.dot-list{opacity:.8; display:none;}
+section.sect-skills div.skill-box div.skill div.s-txt ul.dot-list li{color:#fff; margin-top:0.5rem; padding-left:1rem; position:relative; font-size:1.125rem;}
+section.sect-skills div.skill-box div.skill div.s-txt ul.dot-list li:before{content:''; display:block; width:4px; height:4px; background:#fff; border-radius:50%; position:absolute; top:0.7rem; left:0;}
+section.sect-skills div.skill-box div.skill div.s-ico{margin-top:2rem; position:relative; z-index:1;}
+section.sect-skills div.skill-box div.skill div.s-ico ul.ico-list{display:flex; align-items:center; gap:0.5rem;}
+section.sect-skills div.skill-box div.skill div.s-ico ul.ico-list li{width:4rem; height:4rem; padding:1rem; background:#fff; border-radius:3px; text-align:center; box-shadow:0 0 10px rgba(0,0,0,0.3);}
+section.sect-skills div.skill-box div.skill div.s-ico ul.ico-list li img{display:block; width:100%; height:100%; object-fit:contain;}
+section.sect-skills div.skill-box div.skill.design div.s-bg{background:url("../img/skills_bg_design.png")center/cover no-repeat;}
+section.sect-skills div.skill-box div.skill.publishing div.s-bg{background:url("../img/skills_bg_publlishing.png")center/cover no-repeat;}
+/* hover */
+section.sect-skills div.skill-box div.skill.hover{transform:scale(1.05); background:rgba(255,255,255,0.1);}
+section.sect-skills div.skill-box div.skill.hover div.s-bg{opacity:0;}
+section.sect-skills div.sect-bg div.bg.on{opacity:.2;}
+
+
+
+/*----- ABOUT -----*/
+section.sect-about{overflow:hidden;}
+section.sect-about div.sect-inner{padding-bottom:0 !important;}
+section.sect-about div.sect-top{display:flex; justify-content:space-between;}
+section.sect-about div.sect-top > div{width:50%;}
+section.sect-about div.sect-tit{text-align:right;}
+section.sect-about div.prof-talk{display:flex; gap:1rem; align-items:flex-end;}
+section.sect-about div.prof-talk div.img{width:14rem; height:16rem; border-radius:5px; overflow:hidden;}
+section.sect-about div.prof-talk div.img img{width:100%; height:100%; object-fit:cover;}
+section.sect-about div.prof-talk div.talk{}
+section.sect-about div.prof-talk div.talk div.bubble{margin-left:1rem; padding:1.5rem 2rem; border-radius:1rem; position:relative; background:#efefef; margin-top:0.5rem; min-width:50%;}
+section.sect-about div.prof-talk div.talk div.bubble:before{content:''; display:block; width:1rem; height:1rem; clip-path: polygon(100% 0, 0 0, 100% 100%); background:#efefef; position:absolute; top:1rem; left:-1rem;}
+section.sect-about div.prof-talk div.talk div.bubble div.dots{display:flex; align-items:center; gap:10px; position:absolute; top:50%; left:2rem; transform:translateY(-50%);}
+section.sect-about div.prof-talk div.talk div.bubble div.dots span{display:inline-block; width:12px; height:12px; background:#ccc; border-radius:50%; animation:talk_dots 2.3s cubic-bezier(0.55, 0.58, 0.4, 1.46) infinite forwards;}
+section.sect-about div.prof-talk div.talk div.bubble div.dots span.d01{}
+section.sect-about div.prof-talk div.talk div.bubble div.dots span.d02{animation-delay:0.3s;}
+section.sect-about div.prof-talk div.talk div.bubble div.dots span.d03{animation-delay:0.6s;}
+section.sect-about div.prof-talk div.talk div.bubble p.txt{font-size:1.5rem; font-weight:500; position:relative; z-index:2; color:#7f7f7f;}
+section.sect-about div.prof-talk div.talk div.bubble p.txt b{color:var(--color-black);}
+@keyframes talk_dots {
+    0%,100% {opacity: 0.3;scale: 0.6;}
+    40%,80% {opacity: 1; scale: 1;}
+}
+/* profile list */
+section.sect-about div.prof-list{margin-top:5rem; border-top:1px solid var(--color-black);}
+section.sect-about div.prof-list div.prof{display:flex; align-items:center; padding:3rem 2rem; border-bottom:1px solid #ddd;}
+section.sect-about div.prof-list div.prof:last-child{border-bottom:none; padding-bottom:0;}
+section.sect-about div.prof-list div.prof div.l-tit{width:50%; font-size:2rem; letter-spacing:1.5px; color:var(--color-gray);}
+section.sect-about div.prof-list div.prof div.r-con{width:50%;}
+section.sect-about div.prof-list div.prof div.r-con ul.prof-detail{}
+section.sect-about div.prof-list div.prof div.r-con ul.prof-detail li{font-size:1.25rem; word-break:keep-all; padding-bottom:1.5rem;}
+section.sect-about div.prof-list div.prof div.r-con ul.prof-detail li:last-child{padding-bottom:0 !important;}
+section.sect-about div.prof-list div.prof div.r-con ul.prof-detail li p.txt01{font-weight:600;}
+section.sect-about div.prof-list div.prof div.r-con ul.prof-detail li p.txt02{font-size:0.8em; opacity:.6;}
+/* flow area */
+section.sect-about div.flow-area{position:relative; padding:5rem 0 3rem 0;}
+section.sect-about div.flow-area p.flow-txt{cursor:default; font-weight:800; font-size:10rem; text-wrap:nowrap; animation:flow_text 30s linear infinite; position:relative;}
+section.sect-about div.flow-area span.hover-txt{font-size:1.25rem; transform: translate(10%, -150%); text-wrap:nowrap; transition:0.3s; font-weight:400; letter-spacing:1px; padding:1rem 1.5rem; font-size:1.2rem; background:#fff; border-radius:50px; position:absolute; box-shadow:0 0 30px rgba(0,0,0,0.2);}
+section.sect-about div.flow-area span.hover-txt:before{content:''; display:block; width:1rem; height:1rem; border-radius:50%; position:absolute; left:-0.8rem; bottom:-0.6rem; background:#fff; box-shadow:0 0 20px rgba(0,0,0,0.4);}
+section.sect-about div.flow-area span.hover-txt:after{content:''; display:block; width:0.6rem; height:0.6rem; border-radius:50%; position:absolute; left:-1.5rem; bottom:-1.5rem; background:#fff; box-shadow:0 0 15px rgba(0,0,0,0.4);}
+section.sect-about div.flow-area p.flow-txt:hover{animation-play-state: paused;}
+section.sect-about div.flow-area p.flow-txt:hover + span.hover-txt{opacity:1;}
+@keyframes flow_text{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+}
+
+
+
+/*----- footer -----*/
+footer.footer{padding:3rem; padding-top:0; display:flex; justify-content:space-between; align-items:center;}
+footer.footer div.f-copy{}
+footer.footer div.f-copy p.copyright{color:var(--color-gray);}
+footer.footer div.f-contact{}
+footer.footer div.f-contact ul.contact-list{display:flex; align-items:center; gap:3rem;}
+footer.footer div.f-contact ul.contact-list li{display:flex; align-items:center; gap:0.8rem;}
+footer.footer div.f-contact ul.contact-list li div.ico{width:2.5rem; height:2.5rem; border:1px solid var(--color-gray); border-radius:5px;}
+footer.footer div.f-contact ul.contact-list li div.ico.phone{background:url("../img/ico_phone.svg")center/50% auto no-repeat;}
+footer.footer div.f-contact ul.contact-list li div.ico.mail{background:url("../img/ico_mail.svg")center/50% auto no-repeat;}
+footer.footer div.f-contact ul.contact-list li div.txt{font-size:1.125rem;}
