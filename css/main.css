@@ -71,8 +71,8 @@ section.sect-intro div.intro div.main-ico div.shadow{width:100%; animation:move_
    Work Section
    ========================= */
 section.sect-work{}
-section.sect-work p.tip{width:fit-content; font-size:0.9rem; color:var(--color-gray); text-align:right; margin:0 0 0 auto; padding-bottom:0.5rem; position:relative; padding-left:-50px;}
-section.sect-work p.tip:before{content:'!'; width:17px; height:17px; line-height:17px; font-weight: 700; border-radius:50%; background:#b0b0b0; color:#eee; position:absolute; top:2px; left:-24px; font-size:12px; text-align:center;}
+section.sect-work p.tip{font-size:14px; color:var(--color-gray); text-align:right; position:relative; width:fit-content; margin:0 0 1rem auto;}
+section.sect-work p.tip:before{content:''; display:block; width:4px; height:4px; background:var(--color-gray); opacity:.8; border-radius:50%; position:absolute; top:50%; left:-0.8rem; transform:translateY(-50%);}
 section.sect-work ul.work-list{display:flex; flex-wrap:wrap; gap:3rem; justify-content:space-between;}
 section.sect-work ul.work-list li{width:calc((100% - 6rem) / 3); height:21rem; position:relative; border-radius:5px; overflow:hidden;}
 section.sect-work ul.work-list li a{display:block; width:100%; height:100%;}
@@ -173,7 +173,7 @@ section.sect-about div.sect-top{display:flex; justify-content:space-between;}
 section.sect-about div.sect-tit{text-align:right;}
 section.sect-about div.prof-talk{display:flex; gap:1rem; align-items:flex-end; flex-wrap:wrap;}
 section.sect-about div.prof-talk div.img{width:14rem; height:16rem; border-radius:5px; overflow:hidden;}
-section.sect-about div.prof-talk div.img img{width:100%; height:100%; object-fit:cover;}
+section.sect-about div.prof-talk div.img img{width:100%; height:100%; object-fit:cover; perspective: 1000px;} 
 section.sect-about div.prof-talk div.talk{}
 section.sect-about div.prof-talk div.talk div.bubble{margin-left:1rem; padding:1.5rem 2rem; border-radius:1rem; position:relative; background:#efefef; margin-top:0.5rem; min-width:50%;}
 section.sect-about div.prof-talk div.talk div.bubble:before{content:''; display:block; width:1rem; height:1rem; clip-path: polygon(100% 0, 0 0, 100% 100%); background:#efefef; position:absolute; top:1rem; left:-1rem;}
@@ -188,6 +188,7 @@ section.sect-about div.prof-talk div.talk div.bubble p.txt b{color:var(--color-b
     0%,100% {opacity: 0.3;scale: 0.6;}
     40%,80% {opacity: 1; scale: 1;}
 }
+
 
 /* profile list */
 section.sect-about div.prof-list{margin-top:5rem; border-top:1px solid var(--color-black);}
