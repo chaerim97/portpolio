@@ -247,12 +247,16 @@ $(function(){
                     speed: 12000,
                     cssEase: 'linear',
                     arrows: false,
-                    draggable: true,
                     responsive: [
                         {
                             breakpoint:481,
                             settings: {
                                 slidesToShow: 1,
+                                autoplaySpeed: 3000,
+                                speed: 800,
+                                fade:true,
+                                arrows:true,
+                                cssEase: 'ease',
                             }
                         },
                     ]
