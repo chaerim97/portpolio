@@ -333,7 +333,7 @@ footer div.f-contact ul.contact-list li div.txt{font-size:1.125rem; text-wrap:no
 @media screen and (max-width:480px){
 
     :root{
-        --padding-inner:5rem 2rem;
+        --padding-inner:5rem 2vw;
     }
 
     section.sect-work ul.work-list{margin-right:0; position:relative;}
