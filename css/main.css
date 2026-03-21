@@ -339,8 +339,8 @@ footer div.f-contact ul.contact-list li div.txt{font-size:1.125rem; text-wrap:no
     section.sect-work ul.work-list{margin-right:0; position:relative;}
     section.sect-work ul.work-list li{height:auto; margin:0 0.5rem;}
     section.sect-work ul.work-list button.slick-arrow{font-size:0; width:3rem; height:3rem; z-index:10; border:1px solid #ddd; border-radius:3px; background:#fff url("../img/ico_arrow.svg")center/40% auto no-repeat; position:absolute; top:50%;}
-    section.sect-work ul.work-list button.slick-arrow.slick-prev{left:-1rem;  transform:translateY(-50%) rotate(-90deg);}
-    section.sect-work ul.work-list button.slick-arrow.slick-next{right:-1rem; transform:translateY(-50%) rotate(90deg);}
+    section.sect-work ul.work-list button.slick-arrow.slick-prev{left:-0.5rem;  transform:translateY(-50%) rotate(-90deg);}
+    section.sect-work ul.work-list button.slick-arrow.slick-next{right:-0.5rem; transform:translateY(-50%) rotate(90deg);}
     section.sect-work div.move-moreview a:before,
     section.sect-work div.move-moreview a:after{display:none;}
     section.sect-work div.move-moreview a ul.moreview li{border:1px solid #aaa; padding:0.8rem 1.5rem; border-radius:3px;}
