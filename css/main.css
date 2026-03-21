@@ -339,4 +339,6 @@ footer div.f-contact ul.contact-list li div.txt{font-size:1.125rem; text-wrap:no
 
     section.sect-project div.project ul.p-list li a p.tit{font-size:1.25rem;}
 
+    section.sect-skills div.skill-box{padding:0 1rem;}
+
 }
