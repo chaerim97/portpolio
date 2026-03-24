@@ -36,6 +36,7 @@ header div.h-nav ul.nav-list li:not(.on):hover{color:var(--color-black);}
 #wrap section[class^="sect"] div.sect-tit{margin-bottom:3rem; word-break:keep-all;}
 #wrap section[class^="sect"] div.sect-tit p.eng{font-weight:800; font-size:clamp(3rem, 2.4rem + 3vw, 6rem); margin-bottom:1rem;}
 #wrap section[class^="sect"] div.sect-tit p.kor{font-size:clamp(1.125rem, 1.05rem + 0.375vw, 1.35rem);; opacity:.6;}
+
 #wrap .scrollTop{opacity:0; bottom:0; position:fixed; right:2%; width:4rem; height:4rem; z-index:999; transition: 0.3s; background:#fff url("../img/ico_arrow.svg")center/30% auto no-repeat; border-radius:3px; box-shadow:0 0 30px rgba(0,0,0,0.2);}
 #wrap .scrollTop.on{opacity:1;bottom:10%;}
 #wrap .scrollTop:hover{background:var(--color-black) url("../img/ico_arrow_wh.svg")center 40%/30% auto no-repeat;  box-shadow:0 20px 25px rgba(0,0,0,0.3);}
@@ -228,6 +229,7 @@ footer div.f-contact{}
 footer div.f-contact ul.contact-list{display:flex; align-items:center; gap:1rem 3rem; flex-wrap:wrap;}
 footer div.f-contact ul.contact-list li{display:flex; align-items:center; gap:0.8rem;}
 footer div.f-contact ul.contact-list li div.ico{width:2.5rem; height:2.5rem; border:1px solid var(--color-gray); border-radius:3px;}
+footer div.f-contact ul.contact-list li div.ico.notion{background:url("../img/ico_notion.svg")center/50% auto no-repeat;}
 footer div.f-contact ul.contact-list li div.ico.phone{background:url("../img/ico_phone.svg")center/50% auto no-repeat;}
 footer div.f-contact ul.contact-list li div.ico.mail{background:url("../img/ico_mail.svg")center/50% auto no-repeat;}
 footer div.f-contact ul.contact-list li div.txt{font-size:1.125rem; text-wrap:nowrap;}
