@@ -8,8 +8,8 @@ $(function(){
 
         if(winWid > 480){
             AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
+                duration: 1200,
+                easing: 'ease-in',
                 once: true
             });
         } else {
